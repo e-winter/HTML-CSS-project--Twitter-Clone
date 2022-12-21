@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter Clone</title>
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/timeline.css">
+    <link rel="stylesheet" href="styles/tweet.css">
+    <link rel="stylesheet" href="styles/sidebar-left.css">
+    <link rel="stylesheet" href="styles/sidebar-right.css">
+
+    <link href="https://fonts.cdnfonts.com/css/chirp-2" rel="stylesheet">
+
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    -->
+  </head>
+  <body>
+
+    <div class="sidebar-left-container">
+
+      <div class="sidebar-left">
+        
+        <div class="sidebar-button-container">
+          <div class="twitter-home-button">
+            <img class="twitter-home-icon" src="icons/twitter-icon.png">
+          </div> 
+        </div>
+
+        <div class="sidebar-button-container">
+          <div class="sidebar-button">
+            <img class="sidebar-icon" src="icons/home-icon.png">
+            <div class="sidebar-text">
+              <span class="current-page">Home</span>
+            </div>
+            <div class="home-notifications-indicator"></div>
+          </div>
+        </div>
+        
+        <div class="sidebar-button-container">
+          <div class="sidebar-button">
+            <img class="sidebar-icon" src="icons/explore-icon.png">
+            <div class="sidebar-text">
+              Explore
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-button-container">
+          <div class="sidebar-button">
+            <img class="sidebar-icon" src="icons/bell-icon.png">
+            <div class="sidebar-text">
+              Notifications
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-button-container">
+          <div class="sidebar-button">
+            <img class="sidebar-icon" src="icons/inbox-icon.png">
+            <div class="sidebar-text">
+              Messages
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-button-container">
+          <div class="sidebar-button">
+            <img class="sidebar-icon" src="icons/bookmarks-icon.png">
+            <div class="sidebar-text">
+              Bookmarks
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-button-container">
+          <div class="sidebar-button">
+            <img class="sidebar-icon" src="icons/twitter-blue-icon.png">
+            <div class="sidebar-text">
+              Twitter Blue
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-button-container">
+          <div class="sidebar-button">
+            <img class="sidebar-icon" src="icons/profile-icon.png">
+            <div class="sidebar-text">
+              Profile
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-button-container">
+          <div class="sidebar-button">
+            <div class="more-icon">
+              <div class="more-icon-text">
+                &#183; &#183; &#183;
+              </div>
+            </div>
+            <div class="sidebar-text">
+              More
+            </div>
+          </div>
+        </div>
+        
+        <div class="tweet-compose-button-container">
+          <button class="tweet-compose-button">
+            <img class="tweet-compose-icon" src="icons/compose-icon.png">
+            <div class="tweet-compose-text">Tweet</div>
+          </button>
+        </div>
+
+      </div>
+      
+      <div class="user-account-button">
+        <img class="user-account-picture" src="profile-pics/current-user-pic.png">
+        <div class="user-account-names">
+          <div class="user-account-title">Rookie</div>
+          <div class="user-account-tag">@FlexBoxEnjoyer</div>
+        </div>
+        <div class="user-account-options">&#183; &#183; &#183; </div>
+      </div>
+
+    </div>
+    
+    <div class="timeline-container">
+      <div class="timeline">
+        <div class="home-tweet-creation">
+          <div class="home-header">
+            <div class="home-header-text">Home</div>
+              <button class="content-order-button">
+                <img class="content-order-icon" src="icons/sort-icon.png">
+              </button>
+            </div>
+          </div>
+          <div class="tweet-input-container">
+            <img class="tweet-input-profile-pic" src="profile-pics/current-user-pic.png">
+            <textarea class="tweet-input" cols="50" rows="1" maxlength="140" wrap="soft" placeholder="What's happening?"></textarea>
+          </div>
+          <div class="who-replies-row">
+            <button class="who-replies-button">
+              <div class="who-replies-icon-container">
+                <img class="who-replies-icon" src="icons/who-sees-icon.png">
+              </div>
+              <div class="who-replies-text">Everyone can reply</div>
+            </button>
+        </div>
+
+        <hr class="home-tweet-hr">
+
+        <div class="tweet-options-row">
+          <div class="tweet-options">
+            <button class="option-button">
+              <img class="option-icon" src="icons/media-icon.png">
+            </button>
+            <button class="option-button">
+              <img class="option-icon" src="icons/GIF-icon.png">
+            </button>
+            <button class="option-button">
+              <img class="option-icon" src="icons/poll-icon.png">
+            </button>
+            <button class="option-button">
+              <img class="option-icon" src="icons/emoji-icon.png">
+            </button>
+            <button class="option-button">
+              <img class="option-icon" src="icons/schedule-icon.png">
+            </button>
+            <button class="option-button">
+              <img class="option-icon" src="icons/location-icon.png">
+            </button>
+          </div>
+          <button class="tweet-button">
+            Tweet
+          </button>
+        </div>
+
+        <div class="timeline-tweets-amount">
+          Show 64 Tweets
+        </div>
+
+        <div class="text-tweet-container">
+          <div class="profile-pic-col">
+            <div class="profile-pic-container">
+              <div class="profile-pic-tooltip-container">
+                <img class="profile-pic" src="profile-pics/profile-pic-1.png">
+                <div class="tooltip">
+                  <div class="tooltip-top-row">
+                    <div class="tooltip-profile-pic-container">
+                      <img class="tooltip-profile-pic" src="profile-pics/profile-pic-1.png">
+                    </div>
+                    <button class="tooltip-following-button">
+                      Following
+                    </button>
+                  </div>
+                  <div class="tooltip-user-names">
+                    <div class="profile-name">
+                      supersimple.dev
+                    </div>
+                    <div class="profile-tag">
+                      @SuperSimpleDev
+                    </div>
+                  </div>
+                  <div class="tooltip-description">
+                    I share my latest updates and thoughts here!
+                    <p>-----</p>
+                    <p>I teach coding on YouTube:</p>
+                    <p><span class="tweet-link">http://youtube.com/c/supersimpled</span>…</p>
+                  </div>
+                  <div class="tooltip-follow-info">
+                    <div class="tooltip-following">
+                      3 <span class="tooltip-gray-text">Following</span>
+                    </div>
+                    <div class="tooltip-followers">
+                      1,674 <span class="tooltip-gray-text">Followers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-content-container">
+            <div class="tweet-header">
+              <div class="tweet-user-info">
+                <div class="profile-name">
+                  supersimple.dev
+                </div>
+                <div class="profile-tag">
+                  @SuperSimpleDev &#183; <span class="tweet-age">17 Nov 2021</span>
+                </div>
+              </div>
+              <div class="tweet-options">
+                <button class="tweet-options-button">
+                  &#183; &#183; &#183;
+                </button>
+                <div class="tooltip">More</div>
+              </div>
+            </div>
+            <div class="tweet-text-content">
+              Working on HTML CSS tutorial atm. In the planning phase, looking really good
+            </div>
+            <div class="tweet-actions">
+              <div class="action-reply">
+                <button class="reply-button">
+                  <img class="reply-icon" src="icons/reply-icon.png">
+                </button>
+                <div class="reply-count">18K</div>
+                <div class="tooltip">Reply</div>
+              </div>
+              <div class="action-retweet">
+                <button class="retweet-button">
+                  <img class="retweet-icon" src="icons/retweet-icon.png">
+                </button>
+                <div class="retweet-count">2M</div>
+                <div class="tooltip">Retweet</div>
+              </div>
+              <div class="action-like">
+                <button class="like-button">
+                  <img class="like-icon" src="icons/like-icon.png">
+                </button>
+                <div class="like-count">123M</div>
+                <div class="tooltip">Like</div>
+              </div>
+              <div class="action-share">
+                <button class="share-button">
+                  <img class="share-icon" src="icons/share-icon.png">
+                </button>
+                <div class="tooltip">Share</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-tweet-container">
+          <div class="profile-pic-col">
+            <div class="profile-pic-container">
+              <div class="profile-pic-tooltip-container">
+                <img class="profile-pic" src="profile-pics/profile-pic-2.png">
+                <div class="tooltip">
+                  <div class="tooltip-top-row">
+                    <div class="tooltip-profile-pic-container">
+                      <img class="tooltip-profile-pic" src="profile-pics/profile-pic-2.png">
+                    </div>
+                    <button class="tooltip-following-button">
+                      Following
+                    </button>
+                  </div>
+                  <div class="tooltip-user-names">
+                    <div class="profile-name">
+                      Mr Whiskers
+                      <div class="verified">
+                        <img class="verified-icon-yellow" src="icons/verified-yellow.png">
+                      </div>
+                    </div>
+                    <div class="profile-tag">
+                      @9liveswhiskers
+                    </div>
+                  </div>
+                  <div class="tooltip-description">
+                    I sell catnip
+                    <p><span class="tweet-link">mr.whiskers.catnip.com</span></p>
+                  </div>
+                  <div class="tooltip-follow-info">
+                    <div class="tooltip-following">
+                      41 <span class="tooltip-gray-text">Following</span>
+                    </div>
+                    <div class="tooltip-followers">
+                      540K <span class="tooltip-gray-text">Followers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-content-container">
+            <div class="tweet-header">
+              <div class="tweet-user-info">
+                <div class="profile-name">
+                  Mr. Whiskers
+                </div>
+                <div class="verified">
+                  <img class="verified-icon-yellow" src="icons/verified-yellow.png">
+                </div>
+                <div class="profile-tag">
+                  @9liveswhiskers &#183; <span class="tweet-age">40m</span>
+                </div>
+              </div>
+              <div class="tweet-options">
+                <button class="tweet-options-button">
+                  &#183; &#183; &#183;
+                </button>
+                <div class="tooltip">More</div>
+              </div>
+            </div>
+            <div class="tweet-text-content">
+              One of my happy clients &#128522; <span class="tweet-link">&#35;MrWhiskersCatnip</span>
+            </div>
+            <div class="tweet-video-content">
+              <img class="video-thumbnail" src="thumbnails/thumbnail-1.png">
+              <div class="play-button">
+                <img class="play-button-icon" src="icons/play-button.png">
+              </div>
+              <div class="video-duration">0:50</div>
+              <div class="video-views">28M views</div>
+            </div>
+            <div class="tweet-actions">
+              <div class="action-reply">
+                <button class="reply-button">
+                  <img class="reply-icon" src="icons/reply-icon.png">
+                </button>
+                <div class="reply-count">10</div>
+                <div class="tooltip">Reply</div>
+              </div>
+              <div class="action-retweet">
+                <button class="retweet-button">
+                  <img class="retweet-icon" src="icons/retweet-icon.png">
+                </button>
+                <div class="retweet-count">142</div>
+                <div class="tooltip">Retweet</div>
+              </div>
+              <div class="action-like">
+                <button class="like-button">
+                  <img class="like-icon" src="icons/like-icon.png">
+                </button>
+                <div class="like-count">560</div>
+                <div class="tooltip">Like</div>
+              </div>
+              <div class="action-share">
+                <button class="share-button">
+                  <img class="share-icon" src="icons/share-icon.png">
+                </button>
+                <div class="tooltip">Share</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-tweet-container">
+          <div class="profile-pic-col">
+            <div class="profile-pic-container">
+              <div class="profile-pic-tooltip-container">
+                <img class="profile-pic" src="profile-pics/profile-pic-3.png">
+                <div class="tooltip">
+                  <div class="tooltip-top-row">
+                    <div class="tooltip-profile-pic-container">
+                      <img class="tooltip-profile-pic" src="profile-pics/profile-pic-3.png">
+                    </div>
+                    <button class="tooltip-following-button">
+                      Following
+                    </button>
+                  </div>
+                  <div class="tooltip-user-names">
+                    <div class="profile-name">
+                      strongmancatX
+                      <div class="verified">
+                        <img class="verified-icon-blue" src="icons/verified-blue.png">
+                      </div>
+                    </div>
+                    <div class="profile-tag">
+                      @CatX
+                    </div>
+                  </div>
+                  <div class="tooltip-description">
+                    Elite and novice workout routines from the very best
+                    <p>&#128293; &#128293; &#128293; &#128293;</p>
+                    <p>Follow my link to get started!</p>
+                    <p><span class="tweet-link">catX.fitnessprograms.cat</span></p>
+                  </div>
+                  <div class="tooltip-follow-info">
+                    <div class="tooltip-following">
+                      260 <span class="tooltip-gray-text">Following</span>
+                    </div>
+                    <div class="tooltip-followers">
+                      2.5M <span class="tooltip-gray-text">Followers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-content-container">
+            <div class="tweet-header">
+              <div class="tweet-user-info">
+                <div class="profile-name">
+                  strongmancatX
+                </div>
+                <div class="verified">
+                  <img class="verified-icon-blue" src="icons/verified-blue.png">
+                </div>
+                <div class="profile-tag">
+                  @CatX &#183; <span class="tweet-age">18h</span>
+                </div>
+              </div>
+              <div class="tweet-options">
+                <button class="tweet-options-button">
+                  &#183; &#183; &#183;
+                </button>
+                <div class="tooltip">More</div>
+              </div>
+            </div>
+            <div class="tweet-text-content">
+              My new workout routine is out now! Click the <span class="tweet-link">link</span> to sign up now! &#128526; &#128293; &#128293;
+            </div>
+            <div class="tweet-actions">
+              <div class="action-reply">
+                <button class="reply-button">
+                  <img class="reply-icon" src="icons/reply-icon.png">
+                </button>
+                <div class="reply-count">12</div>
+                <div class="tooltip">Reply</div>
+              </div>
+              <div class="action-retweet">
+                <button class="retweet-button">
+                  <img class="retweet-icon" src="icons/retweet-icon.png">
+                </button>
+                <div class="retweet-count">11</div>
+                <div class="tooltip">Retweet</div>
+              </div>
+              <div class="action-like">
+                <button class="like-button">
+                  <img class="like-icon" src="icons/like-icon.png">
+                </button>
+                <div class="like-count">78</div>
+                <div class="tooltip">Like</div>
+              </div>
+              <div class="action-share">
+                <button class="share-button">
+                  <img class="share-icon" src="icons/share-icon.png">
+                </button>
+                <div class="tooltip">Share</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-tweet-container">
+          <div class="profile-pic-col">
+            <div class="profile-pic-container">
+              <div class="profile-pic-tooltip-container">
+                <img class="profile-pic" src="profile-pics/profile-pic-4.png">
+                <div class="tooltip">
+                  <div class="tooltip-top-row">
+                    <div class="tooltip-profile-pic-container">
+                      <img class="tooltip-profile-pic" src="profile-pics/profile-pic-4.png">
+                    </div>
+                    <button class="tooltip-following-button">
+                      Following
+                    </button>
+                  </div>
+                  <div class="tooltip-user-names">
+                    <div class="profile-name">
+                      Riot Games
+                      <div class="verified">
+                        <img class="verified-icon-yellow" src="icons/verified-yellow.png">
+                      </div>
+                    </div>
+                    <div class="profile-tag">
+                      @riotgames
+                    </div>
+                  </div>
+                  <div class="tooltip-description">
+                    Riot Games is the developer of <span class="tweet-link">@LeagueofLegends</span>, <span
+                      class="tweet-link">@TFT</span>, <span class="tweet-link">@PlayRuneterra</span>, <span
+                      class="tweet-link">@wildrift</span>, and <span class="tweet-link">@playVALORANT</span>. For in-game or account
+                    issues, try @RiotSupport.
+                  </div>
+                  <div class="tooltip-follow-info">
+                    <div class="tooltip-following">
+                      266 <span class="tooltip-gray-text">Following</span>
+                    </div>
+                    <div class="tooltip-followers">
+                      2.7M <span class="tooltip-gray-text">Followers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-content-container">
+            <div class="tweet-header">
+              <div class="tweet-user-info">
+                <div class="profile-name">
+                  Riot Games
+                </div>
+                <div class="verified">
+                  <img class="verified-icon-yellow" src="icons/verified-yellow.png">
+                </div>
+                <div class="profile-tag">
+                  @riotgames &#183; <span class="tweet-age">15 Dec</span>
+                </div>
+              </div>
+              <div class="tweet-options">
+                <button class="tweet-options-button">
+                  &#183; &#183; &#183;
+                </button>
+                <div class="tooltip">More</div>
+              </div>
+            </div>
+            <div class="tweet-text-content">
+              For each 50 likes we get, we'll add another cupcake into Arcane Caitlyn's screen shot &#129473;
+            </div>
+            <div class="tweet-image-content">
+              <img class="tweet-image" src="images/image-1.png">
+            </div>
+            <div class="tweet-actions">
+              <div class="action-reply">
+                <button class="reply-button">
+                  <img class="reply-icon" src="icons/reply-icon.png">
+                </button>
+                <div class="reply-count">122</div>
+                <div class="tooltip">Reply</div>
+              </div>
+              <div class="action-retweet">
+                <button class="retweet-button">
+                  <img class="retweet-icon" src="icons/retweet-icon.png">
+                </button>
+                <div class="retweet-count">1,420</div>
+                <div class="tooltip">Retweet</div>
+              </div>
+              <div class="action-like">
+                <button class="like-button">
+                  <img class="like-icon" src="icons/like-icon.png">
+                </button>
+                <div class="like-count">53.9K</div>
+                <div class="tooltip">Like</div>
+              </div>
+              <div class="action-share">
+                <button class="share-button">
+                  <img class="share-icon" src="icons/share-icon.png">
+                </button>
+                <div class="tooltip">Share</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-tweet-container">
+          <div class="profile-pic-col">
+            <div class="profile-pic-container">
+              <div class="profile-pic-tooltip-container">
+                <img class="profile-pic" src="profile-pics/profile-pic-5.png">
+                <div class="tooltip">
+                  <div class="tooltip-top-row">
+                    <div class="tooltip-profile-pic-container">
+                      <img class="tooltip-profile-pic" src="profile-pics/profile-pic-5.png">
+                    </div>
+                    <button class="tooltip-following-button">
+                      Following
+                    </button>
+                  </div>
+                  <div class="tooltip-user-names">
+                    <div class="profile-name">
+                      First We Feast
+                      <div class="verified">
+                        <img class="verified-icon-yellow" src="icons/verified-yellow.png">
+                      </div>
+                    </div>
+                    <div class="profile-tag">
+                      @firstwefeast
+                    </div>
+                  </div>
+                  <div class="tooltip-description">
+                    Bridging the gap between food, drinks & pop culture. <span class="tweet-link">#FirstWeFeast</span> <span class="tweet-link">#HotOnes</span>
+                  </div>
+                  <div class="tooltip-follow-info">
+                    <div class="tooltip-following">
+                      1,057 <span class="tooltip-gray-text">Following</span>
+                    </div>
+                    <div class="tooltip-followers">
+                      315.3K <span class="tooltip-gray-text">Followers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-content-container">
+            <div class="tweet-header">
+              <div class="tweet-user-info">
+                <div class="profile-name">
+                  First We Feast
+                </div>
+                <div class="verified">
+                  <img class="verified-icon-yellow" src="icons/verified-yellow.png">
+                </div>
+                <div class="profile-tag">
+                  @firstwefeast &#183; <span class="tweet-age">15 Dec</span>
+                </div>
+              </div>
+              <div class="tweet-options">
+                <button class="tweet-options-button">
+                  &#183; &#183; &#183;
+                </button>
+                <div class="tooltip">More</div>
+              </div>
+            </div>
+            <div class="tweet-text-content">
+
+              &#128293; NEW <span class="tweet-link">&#35;HotOnes</span> episode &#128293; Paul Dano is an actor you know from acclaimed performances in films like The Batman, Little Miss Sunshine, and many more, but can he take on the Hot Ones gauntlet? 
+
+              <p>
+                Find out NOW: <span class="tweet-link">youtu.be/OfsxF-OrKsA</span>
+              </p>
+
+              <p>
+                Presented by <span class="tweet-link">@Dreamworks</span>
+              </p>
+              
+            </div>
+            <div class="tweet-video-content">
+              <img class="video-thumbnail" src="thumbnails/thumbnail-2.png">
+              <div class="play-button">
+                <img class="play-button-icon" src="icons/play-button.png">
+              </div>
+              <div class="video-duration">0:57</div>
+              <div class="video-views">174.1k views</div>
+            </div>
+            <div class="tweet-actions">
+              <div class="action-reply">
+                <button class="reply-button">
+                  <img class="reply-icon" src="icons/reply-icon.png">
+                </button>
+                <div class="reply-count">18</div>
+                <div class="tooltip">Reply</div>
+              </div>
+              <div class="action-retweet">
+                <button class="retweet-button">
+                  <img class="retweet-icon" src="icons/retweet-icon.png">
+                </button>
+                <div class="retweet-count">107</div>
+                <div class="tooltip">Retweet</div>
+              </div>
+              <div class="action-like">
+                <button class="like-button">
+                  <img class="like-icon" src="icons/like-icon.png">
+                </button>
+                <div class="like-count">451</div>
+                <div class="tooltip">Like</div>
+              </div>
+              <div class="action-share">
+                <button class="share-button">
+                  <img class="share-icon" src="icons/share-icon.png">
+                </button>
+                <div class="tooltip">Share</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-link-tweet-container">
+          <div class="profile-pic-col">
+            <div class="profile-pic-container">
+              <div class="profile-pic-tooltip-container">
+                <img class="profile-pic" src="profile-pics/profile-pic-1.png">
+                <div class="tooltip">
+                  <div class="tooltip-top-row">
+                    <div class="tooltip-profile-pic-container">
+                      <img class="tooltip-profile-pic" src="profile-pics/profile-pic-1.png">
+                    </div>
+                    <button class="tooltip-following-button">
+                      Following
+                    </button>
+                  </div>
+                  <div class="tooltip-user-names">
+                    <div class="profile-name">
+                      supersimple.dev
+                    </div>
+                    <div class="profile-tag">
+                      @SuperSimpleDev
+                    </div>
+                  </div>
+                  <div class="tooltip-description">
+                    I share my latest updates and thoughts here!
+                    <p>-----</p>
+                    <p>I teach coding on YouTube:</p>
+                    <p><span class="tweet-link">http://youtube.com/c/supersimpled</span>…</p>
+                  </div>
+                  <div class="tooltip-follow-info">
+                    <div class="tooltip-following">
+                      3 <span class="tooltip-gray-text">Following</span>
+                    </div>
+                    <div class="tooltip-followers">
+                      1,674 <span class="tooltip-gray-text">Followers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-content-container">
+            <div class="tweet-header">
+              <div class="tweet-user-info">
+                <div class="profile-name">
+                  supersimple.dev
+                </div>
+                <div class="profile-tag">
+                  @SuperSimpleDev &#183; <span class="tweet-age">19 Oct 2021</span>
+                </div>
+              </div>
+              <div class="tweet-options">
+                <button class="tweet-options-button">
+                  &#183; &#183; &#183;
+                </button>
+                <div class="tooltip">More</div>
+              </div>
+            </div>
+            <div class="tweet-text-content">
+              What is backend web development? A complete overview. New video is up!
+            </div>
+            <div class="tweet-video-link-content">
+              <div class="thumbnail-section">
+                <img class="video-thumbnail" src="thumbnails/thumbnail-3.png">
+                <div class="link-play-button">
+                  <img class="link-play-button-icon" src="icons/play-button.png">
+                </div>
+              </div>
+              <div class="video-info-section">
+                <div class="link-website">
+                  youtube.com
+                </div>
+                <div class="link-title">
+                  Backend web devleopment - a complete overview (...
+                </div>
+                <div class="link description">
+                  We learn every backend technology we need to build a web application. We go over backend ...
+                </div>
+              </div>
+            </div>
+              
+            <div class="tweet-actions">
+              <div class="action-reply">
+                <button class="reply-button">
+                  <img class="reply-icon" src="icons/reply-icon.png">
+                </button>
+                <div class="reply-count">10K</div>
+                <div class="tooltip">Reply</div>
+              </div>
+              <div class="action-retweet">
+                <button class="retweet-button">
+                  <img class="retweet-icon" src="icons/retweet-icon.png">
+                </button>
+                <div class="retweet-count">142M</div>
+                <div class="tooltip">Retweet</div>
+              </div>
+              <div class="action-like">
+                <button class="like-button">
+                  <img class="like-icon" src="icons/like-icon.png">
+                </button>
+                <div class="like-count">560M</div>
+                <div class="tooltip">Like</div>
+              </div>
+              <div class="action-share">
+                <button class="share-button">
+                  <img class="share-icon" src="icons/share-icon.png">
+                </button>
+                <div class="tooltip">Share</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="image-tweet-container">
+          <div class="profile-pic-col">
+            <div class="profile-pic-container">
+              <div class="profile-pic-tooltip-container">
+                <img class="profile-pic" src="profile-pics/profile-pic-6.png">
+                <div class="tooltip">
+                  <div class="tooltip-top-row">
+                    <div class="tooltip-profile-pic-container">
+                      <img class="tooltip-profile-pic" src="profile-pics/profile-pic-6.png">
+                    </div>
+                    <button class="tooltip-following-button">
+                      Following
+                    </button>
+                  </div>
+                  <div class="tooltip-user-names">
+                    <div class="profile-name">
+                      Snoop Dogg
+                      <div class="verified">
+                        <img class="verified-icon-blue" src="icons/verified-blue.png">
+                      </div>
+                    </div>
+                    <div class="profile-tag">
+                      @SnoopDogg
+                    </div>
+                  </div>
+                  <div class="tooltip-description">
+                    “I STILL GOT IT” mixtape OUT NOW
+                  </div>
+                  <div class="tooltip-follow-info">
+                    <div class="tooltip-following">
+                      2,794 <span class="tooltip-gray-text">Following</span>
+                    </div>
+                    <div class="tooltip-followers">
+                      20.8M <span class="tooltip-gray-text">Followers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-content-container">
+            <div class="tweet-header">
+              <div class="tweet-user-info">
+                <div class="profile-name">
+                  Snoop Dogg
+                </div>
+                <div class="verified">
+                  <img class="verified-icon-blue" src="icons/verified-blue.png">
+                </div>
+                <div class="profile-tag">
+                  @SnoopDogg &#183; <span class="tweet-age">2h</span>
+                </div>
+              </div>
+              <div class="tweet-options">
+                <button class="tweet-options-button">
+                  &#183; &#183; &#183;
+                </button>
+                <div class="tooltip">More</div>
+              </div>
+            </div>
+            <div class="tweet-text-content">
+              Do you??
+            </div>
+            <div class="tweet-image-content">
+              <img class="tweet-image" src="images/image-2.png"> 
+            </div>
+            <div class="tweet-actions">
+              <div class="action-reply">
+                <button class="reply-button">
+                  <img class="reply-icon" src="icons/reply-icon.png">
+                </button>
+                <div class="reply-count">357</div>
+                <div class="tooltip">Reply</div>
+              </div>
+              <div class="action-retweet">
+                <button class="retweet-button">
+                  <img class="retweet-icon" src="icons/retweet-icon.png">
+                </button>
+                <div class="retweet-count">345</div>
+                <div class="tooltip">Retweet</div>
+              </div>
+              <div class="action-like">
+                <button class="like-button">
+                  <img class="like-icon" src="icons/like-icon.png">
+                </button>
+                <div class="like-count">4,386</div>
+                <div class="tooltip">Like</div>
+              </div>
+              <div class="action-share">
+                <button class="share-button">
+                  <img class="share-icon" src="icons/share-icon.png">
+                </button>
+                <div class="tooltip">Share</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-tweet-container">
+          <div class="profile-pic-col">
+            <div class="profile-pic-container">
+              <div class="profile-pic-tooltip-container">
+                <img class="profile-pic" src="profile-pics/current-user-pic.png">
+                <div class="tooltip">
+                  <div class="tooltip-top-row">
+                    <div class="tooltip-profile-pic-container">
+                      <img class="tooltip-profile-pic" src="profile-pics/current-user-pic.png">
+                    </div>
+                    <button class="tooltip-following-button">
+                      Following
+                    </button>
+                  </div>
+                  <div class="tooltip-user-names">
+                    <div class="profile-name">
+                      Rookie
+                    </div>
+                    <div class="profile-tag">
+                      @FlexBoxEnjoyer
+                    </div>
+                  </div>
+                  <div class="tooltip-description">
+                    I am learning HTML and CSS from the best <span class="tweet-link">@SuperSimpleDev</span>.
+                    JavaScript next! &#128579;
+                  </div>
+                  <div class="tooltip-follow-info">
+                    <div class="tooltip-following">
+                      1 <span class="tooltip-gray-text">Following</span>
+                    </div>
+                    <div class="tooltip-followers">
+                      0 <span class="tooltip-gray-text">Followers</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-content-container">
+            <div class="tweet-header">
+              <div class="tweet-user-info">
+                <div class="profile-name">
+                  Rookie
+                </div>
+                <div class="profile-tag">
+                  @FlexBoxEnjoyer &#183; <span class="tweet-age">5m</span>
+                </div>
+              </div>
+              <div class="tweet-options">
+                <button class="tweet-options-button">
+                  &#183; &#183; &#183;
+                </button>
+                <div class="tooltip">More</div>
+              </div>
+            </div>
+            <div class="tweet-text-content">
+              I am running out of ideas ... &#128533;
+            </div>
+            <div class="tweet-actions">
+              <div class="action-reply">
+                <button class="reply-button">
+                  <img class="reply-icon" src="icons/reply-icon.png">
+                </button>
+                <div class="reply-count">1</div>
+                <div class="tooltip">Reply</div>
+              </div>
+              <div class="action-retweet">
+                <button class="retweet-button">
+                  <img class="retweet-icon" src="icons/retweet-icon.png">
+                </button>
+                <div class="retweet-count">3</div>
+                <div class="tooltip">Retweet</div>
+              </div>
+              <div class="action-like">
+                <button class="like-button">
+                  <img class="like-icon" src="icons/like-icon.png">
+                </button>
+                <div class="like-count">2</div>
+                <div class="tooltip">Like</div>
+              </div>
+              <div class="action-share">
+                <button class="share-button">
+                  <img class="share-icon" src="icons/share-icon.png">
+                </button>
+                <div class="tooltip">Share</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+    
+    <div class="sidebar-right-container">
+      <div class="sidebar-right">
+        <div class="search-bar">
+          <img class="search-icon" src="icons/search-icon.png">
+          <input class="twitter-search" type="text" placeholder="Search Twitter">
+        </div>
+
+        <div class="trending-list">
+
+          <div class="trending-header">What's happening</div>
+
+          <div class="trending-image-row">
+            <div class="trending-text-content">
+              <div class="trending-details">
+                Sport &#183; This week
+              </div>
+              <div class="trending-title">
+                World Cup Final
+              </div>
+            </div>
+            <div class="trending-image-content">
+              <img class="trending-image" src="images/trending.png">
+            </div>
+          </div>
+
+          <div class="trending-text-row">
+            <div class="trending-text-content">
+              <div class="trending-details">
+                Trending
+              </div>
+              <div class="trending-title">
+                Mbappe
+              </div>
+              <div class="trending-details">
+                760K tweets
+              </div>
+            </div>
+            <div class="trending-options">
+              <button class="trending-options-button">
+                &#183; &#183; &#183;
+              </button>
+            </div>
+          </div>
+
+          <div class="trending-text-row">
+            <div class="trending-text-content">
+              <div class="trending-details">
+                Trending
+              </div>
+              <div class="trending-title">
+                New Year
+              </div>
+              <div class="trending-details">
+                540K tweets
+              </div>
+            </div>
+            <div class="trending-options">
+              <button class="trending-options-button">
+                &#183; &#183; &#183;
+              </button>
+            </div>
+          </div>
+
+          <div class="trending-text-row">
+            <div class="trending-text-content">
+              <div class="trending-details">
+                Trending
+              </div>
+              <div class="trending-title">
+                SuperSimpleDev
+              </div>
+              <div class="trending-details">
+                2.6M tweets
+              </div>
+            </div>
+            <div class="trending-options">
+              <button class="trending-options-button">
+                &#183; &#183; &#183;
+              </button>
+            </div>
+          </div>
+
+          <div class="trending-text-row">
+            <div class="trending-text-content">
+              <div class="trending-details">
+                Trending
+              </div>
+              <div class="trending-title">
+                CEO of Twitter
+              </div>
+              <div class="trending-details">
+                760K tweets
+              </div>
+            </div>
+            <div class="trending-options">
+              <button class="trending-options-button">
+                &#183; &#183; &#183;
+              </button>
+            </div>
+          </div>
+
+          <div class="show-more-row">
+            <div class="show-more-text">
+              Show More
+            </div>
+          </div>
+
+        </div>
+
+        <div class="follow-suggestions">
+          <div class="suggestions-header">
+            Who to follow
+          </div>
+
+          <div class="suggestion">
+            <div class="suggestion-profile">
+              <div class="suggestion-profile-pic">
+                <div class="suggestion-profile-pic-container">
+                  <div class="profile-pic-tooltip-container">
+                    <img class="profile-pic" src="profile-pics/profile-pic-1.png">
+                    <div class="suggestion-tooltip">
+                      <div class="tooltip-top-row">
+                        <div class="tooltip-profile-pic-container">
+                          <img class="tooltip-profile-pic" src="profile-pics/profile-pic-1.png">
+                        </div>
+                        <button class="tooltip-following-button">
+                          Following
+                        </button>
+                      </div>
+                      <div class="tooltip-user-names">
+                        <div class="profile-name">
+                          supersimple.dev
+                        </div>
+                        <div class="profile-tag">
+                          @SuperSimpleDev
+                        </div>
+                      </div>
+                      <div class="tooltip-description">
+                        I share my latest updates and thoughts here!
+                        <p>-----</p>
+                        <p>I teach coding on YouTube:</p>
+                        <p><span class="tweet-link">http://youtube.com/c/supersimpled</span>…</p>
+                      </div>
+                      <div class="tooltip-follow-info">
+                        <div class="tooltip-following">
+                          3 <span class="tooltip-gray-text">Following</span>
+                        </div>
+                        <div class="tooltip-followers">
+                          1,674 <span class="tooltip-gray-text">Followers</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="suggestion-profile-names">
+                <div class="suggestion-profile-name">supersimple.dev</div>
+                <div class="suggestion-profile-tag">@SuperSimpleDev</div>
+              </div>
+            </div>
+            <div class="suggestion-follow-button">
+              <button class="follow-button">
+                Follow
+              </button>
+            </div>
+          </div>
+
+          <div class="suggestion">
+            <div class="suggestion-profile">
+              <div class="suggestion-profile-pic">
+                <div class="suggestion-profile-pic-container">
+                  <div class="profile-pic-tooltip-container">
+                    <img class="profile-pic" src="profile-pics/profile-pic-7.png">
+                    <div class="suggestion-tooltip-1">
+                      <div class="tooltip-top-row">
+                        <div class="tooltip-profile-pic-container">
+                          <img class="tooltip-profile-pic" src="profile-pics/profile-pic-7.png">
+                        </div>
+                        <button class="tooltip-following-button">
+                          Following
+                        </button>
+                      </div>
+                      <div class="tooltip-user-names">
+                        <div class="profile-name">
+                          Sean Evans
+                          <div class="verified">
+                            <img class="verified-icon-blue" src="icons/verified-blue.png">
+                          </div>
+                        </div>
+                        <div class="profile-tag">
+                          @seanseaevans
+                        </div>
+                      </div>
+                      <div class="tooltip-description">
+                        First We Feast & Hot Ones
+                      </div>
+                      <div class="tooltip-follow-info">
+                        <div class="tooltip-following">
+                          704 <span class="tooltip-gray-text">Following</span>
+                        </div>
+                        <div class="tooltip-followers">
+                          451.2K <span class="tooltip-gray-text">Followers</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="suggestion-profile-names">
+                <div class="suggestion-profile-title">
+                  <div class="suggestion-profile-name">Sean Evans</div>
+                  <div class="verified">
+                    <img class="verified-icon-blue" src="icons/verified-blue.png">
+                  </div>
+                </div>
+                <div class="suggestion-profile-tag">@seanseaevans</div>
+              </div>
+            </div>
+            <div class="suggestion-follow-button">
+              <button class="follow-button">
+                Follow
+              </button>
+            </div>
+          </div>
+
+          <div class="show-more-row">
+            <div class="show-more-text">
+              Show More
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
