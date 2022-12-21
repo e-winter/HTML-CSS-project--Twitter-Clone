@@ -1,0 +1,566 @@
+.text-tweet-container {
+  width: 600px;
+  min-height: 90px;
+  padding-bottom: 4px;
+  display: flex;
+  border-bottom: 1px solid rgb(40, 40, 40);
+  cursor: pointer;
+}
+
+.video-tweet-container,
+.image-tweet-container {
+  width: 600px;
+  min-height: 560px;
+  padding-bottom: 4px;
+  display: flex;
+  border-bottom: 1px solid rgb(40, 40, 40);
+  cursor: pointer;
+}
+
+.video-link-tweet-container {
+  width: 600px;
+  min-height: 250px;
+  display: flex;
+  border-bottom: 1px solid rgb(40, 40, 40);
+  cursor: pointer;
+}
+
+.text-tweet-container:hover, 
+.video-tweet-container:hover,
+.image-tweet-container:hover {
+  background-color: rgb(8, 8, 8);
+}
+
+.profile-pic-col {
+  display: flex;
+  height: 100%;
+  /*border: 1px solid red;*/
+
+}
+
+.profile-pic-container {
+  padding: 12px 10px 0px 15px;
+}
+
+.profile-pic-tooltip-container {
+  position: relative;
+}
+
+.profile-pic-tooltip-container .tooltip,
+.profile-pic-tooltip-container .suggestion-tooltip,
+.profile-pic-tooltip-container .suggestion-tooltip-1 {
+  width: 280px;
+  border-radius: 10px;
+
+  padding: 18px;
+
+  background-color: black;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+
+  cursor: auto;
+  pointer-events: none;
+
+  position: absolute;
+  top: 60px;
+  left: -100px;
+
+  z-index: 200;
+
+  opacity: 0;
+  transition: opacity 0.15s;
+
+}
+
+.profile-pic-tooltip-container .suggestion-tooltip {
+  top: -300px;
+  left: -125px;
+}
+
+.profile-pic-tooltip-container .suggestion-tooltip-1 {
+  top: -224px;
+  left: -125px;
+}
+
+.profile-pic-tooltip-container:hover .tooltip,
+.profile-pic-tooltip-container:hover .suggestion-tooltip,
+.profile-pic-tooltip-container:hover .suggestion-tooltip-1 {
+  opacity: 1;
+  transition: opacity 0.15s;
+  transition-delay: 0.4s;
+  transition-property: opacity;
+}
+
+.tooltip-top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.tooltip-profile-pic-container {
+  display: flex;
+  align-items: center;
+}
+
+.tooltip-profile-pic {
+  width: 65px;
+  height: 65px;
+  border-radius: 33px;
+  object-fit: cover;
+
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.tooltip-following-button {
+  background-color: black;
+  color: rgb(228, 228, 228);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  width: 100px;
+  height: 36px;
+
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 16px;
+
+  padding: 8px;
+  margin-right: 16px;
+
+  cursor: pointer;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+}
+
+.tooltip-following-button:hover {
+  color: rgb(250, 0, 0);
+  background-color: rgb(50, 0, 0);
+  border-color: rgb(180, 0, 0);
+}
+
+.tooltip-user-names {
+  margin-bottom: 12px;
+}
+
+.tooltip .profile-name,
+.suggestion-tooltip .profile-name,
+.suggestion-tooltip-1 .profile-name {
+  margin-left: 0;
+  display: flex;
+}
+
+.tooltip .profile-tag,
+.suggestion-tooltip .profile-tag,
+.suggestion-tooltip-1 .profile-tag {
+  margin-left: 0;
+}
+
+.tooltip-description {
+  margin-bottom: 20px;
+}
+
+.tooltip-follow-info {
+  display: flex;
+}
+
+.tooltip-following, .tooltip-followers {
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+.tooltip-following {
+  margin-right: 16px;
+}
+
+.tooltip-following:hover, .tooltip-followers:hover {
+  text-decoration: underline;
+}
+
+.tooltip-gray-text {
+  color: rgb(120, 120, 120);
+  font-weight: normal;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  object-fit: cover;
+
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.profile-pic:hover {
+  opacity: 0.8;
+}
+
+.tweet-content-container {
+  width: 530px;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.profile-name:hover {
+  text-decoration: underline;
+}
+
+.verified {
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.verified-icon-yellow,
+.verified-icon-blue {
+  height: 18px;
+}
+
+.profile-tag {
+  color: rgb(120, 120, 120);
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+.tweet-age {
+  cursor: pointer;
+}
+
+.tweet-age:hover {
+  text-decoration: underline;
+}
+
+.tweet-options {
+  position: relative;
+}
+
+.tweet-options-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  border: none;
+  padding-right: 8px;
+  line-height: 0;
+  letter-spacing: -2px;
+
+  background-color: transparent;
+  color: gray;
+
+  font-size: 22px;
+
+  margin-top: 4px;
+  margin-right: 10px;
+
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.tweet-options-button:hover {
+  background-color: rgb(3, 19, 31);
+  color: rgb(29, 155, 240);
+}
+
+.tweet-text-content {
+  padding-left: 10px;
+  padding-right: 40px;
+  margin-top: -6px;
+}
+
+.tweet-link {
+  color: rgb(29, 155, 240);
+  cursor: pointer;
+}
+
+.tweet-link:hover {
+  text-decoration: underline;
+}
+
+.tweet-video-content,
+.tweet-image-content {
+  border: 1px solid rgb(40, 40, 40);
+  border-radius: 16px;
+  height: 450px;
+  margin: 16px 16px 0px 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tweet-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  border: 6px solid white;
+  border-radius: 50px;
+  background-color: rgb(0, 153, 255);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 218px;
+  bottom: 200px;
+  
+  cursor: pointer;
+  transition: background-color 0.15s;
+  
+}
+
+.play-button-icon {
+  height: 30px;
+  margin-left: 6px;
+}
+
+.play-button:hover {
+  background-color: rgb(4, 125, 206);
+}
+
+.video-duration {
+  background-color: rgba(0, 0, 0, 0.8);
+
+  color: white;
+  font-size: 14px;
+  
+  border-radius: 10px 0px 0px 10px;     /* values are top left to bottom left clockwise*/ 
+
+  padding: 0px 8px;
+
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.video-views {
+  background-color: rgba(0, 0, 0, 0.8);
+  
+  color: white;
+  font-size: 14px;
+
+  border-radius: 0px 10px 10px 0px;
+
+  padding: 0px 8px;
+
+  position: absolute;
+  bottom: 10px;
+  left: 54px;
+}
+
+.tweet-actions {
+  width: 400px;
+
+  color: grey;
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.action-reply, 
+.action-retweet, 
+.action-like, 
+.action-share {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  position: relative;
+  
+
+}
+
+.tweet-options .tooltip, 
+.action-reply .tooltip,
+.action-retweet .tooltip,
+.action-like .tooltip,
+.action-share .tooltip {
+
+  background-color: rgba(118, 169, 199, 0.452);
+  color: white;
+  font-size: 11px;
+  border-radius: 2px;
+  padding: 3px 4px;
+
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+
+  pointer-events: none;
+
+  transition: none;
+  opacity: 0;
+
+
+}
+
+.tweet-options:hover .tooltip,
+.action-reply:hover .tooltip,
+.action-retweet:hover .tooltip,
+.action-like:hover .tooltip,
+.action-share:hover .tooltip {
+  opacity: 1;
+  transition: opacity 0.15s;
+  transition-delay: 0.4s;
+  transition-property: opacity;
+}
+
+
+.reply-button,
+.retweet-button,
+.like-button,
+.share-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.reply-icon,
+.retweet-icon,
+.like-icon,
+.share-icon {
+  height: 16px;
+}
+
+.reply-count,
+.retweet-count,
+.like-count {
+  font-size: 13px;
+  margin-left: 3px;
+  
+}
+
+.action-reply:hover .reply-button {
+  background-color: rgb(1, 17, 20);
+}
+
+.action-reply:hover .reply-icon {
+  filter: invert(67%) sepia(79%) saturate(1072%) hue-rotate(152deg) brightness(103%) contrast(84%);
+  /*values achieved using CSS filter generator by Barrett Sonntag*/
+}
+
+.action-reply:hover .reply-count {
+  color: rgb(52, 211, 235);
+}
+
+.action-retweet:hover .retweet-button {
+  background-color: rgb(2, 29, 14);
+}
+
+.action-retweet:hover .retweet-icon {
+  filter: invert(75%) sepia(89%) saturate(480%) hue-rotate(60deg) brightness(96%) contrast(91%);
+}
+
+.action-retweet:hover .retweet-count {
+  color: rgb(52, 235, 82);
+}
+
+.action-like:hover .like-button {
+  background-color: rgb(26, 5, 5);
+}
+
+.action-like:hover .like-icon {
+  filter: invert(34%) sepia(76%) saturate(2320%) hue-rotate(341deg) brightness(94%) contrast(97%);
+}
+
+.action-like:hover .like-count {
+  color: rgb(204, 24, 24);
+}
+
+.action-share:hover .share-button {
+  background-color: rgb(1, 17, 20);
+}
+
+.action-share:hover .share-icon {
+  filter: invert(67%) sepia(79%) saturate(1072%) hue-rotate(152deg) brightness(103%) contrast(84%);
+}
+
+.tweet-video-link-content {
+  width: 506px;
+  height: 130px;
+  border-radius: 10px;
+  border: 1px solid rgb(40, 40, 40);
+  overflow: hidden;
+  margin-top: 10px;
+  display: flex;
+}
+
+.thumbnail-section {
+  width: 128px;
+  height: 128px;
+  border-right: 1px solid rgb(40, 40, 40);
+  position: relative;
+}
+
+.link-play-button {
+  width: 30px;
+  height: 30px;
+  border: 5px solid white;
+  border-radius: 25px;
+  background-color: rgb(0, 153, 255);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 44px;
+  bottom: 40px;
+
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.link-play-button-icon {
+  height: 16px;
+  margin-left: 5px;
+}
+
+.link-play-button:hover {
+  background-color: rgb(4, 125, 206);
+}
+
+.video-info-section {
+  font-size: 15px;
+  color: gray;
+  flex: 1;
+  padding: 8px 3px 0px 20px;
+}
+
+.link-website {
+  margin-top: 10px;
+}
+
+.link-title {
+  color: rgb(228, 228, 228);
+  margin: 6px 0px;
+}
